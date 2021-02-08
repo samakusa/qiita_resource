@@ -1,6 +1,3 @@
-#include <iostream>
-#include <iomanip>
-
 #include "bitboard.h"
 
 Bitboard::Bitboard() { this->bb[UPPER] = 0; this->bb[LOWER] = 0; }
@@ -10,6 +7,9 @@ uint64_t Bitboard::GetU() const { return this->bb[UPPER]; }
 uint64_t Bitboard::GetL() const { return this->bb[LOWER]; }
 
 #ifdef UNIT_TEST_BITBOARD
+#include <iostream>
+#include <iomanip>
+
 const int BOARD_WIDTH = 9;
 const int UPPER_BIT = 64;
 enum { FILE_1, FILE_2, FILE_3, FILE_4, FILE_5, FILE_6, FILE_7, FILE_8, FILE_9, FILE_NB };
